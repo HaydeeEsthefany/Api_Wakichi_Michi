@@ -16,7 +16,7 @@ def send_email_token_bbva(  token ,email, *args, **kwargs):
     email_html_message = render_to_string('email-recovery-password.html', context)
     msg = EmailMultiAlternatives(
         # title:
-        "RECUPERAR CONTRASEÑA - SIGLEPRA",
+        "VALIDAR IDENTIDAD - BBVA",
         # message:
         "",
         # from:
