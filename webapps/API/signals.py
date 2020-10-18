@@ -7,8 +7,7 @@ from rest_framework_jwt.settings import api_settings
 
 
 def send_email_token_bbva(  token ,email, *args, **kwargs):
-    context = {
-        'cdn_url' : CDN_URL,
+    context = { 
         'reset_password_url': "{}{}".format(BACK_END_URL, token)
     }
 
