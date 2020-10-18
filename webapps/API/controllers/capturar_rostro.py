@@ -9,8 +9,14 @@ class CaptureView(APIView):
 
 	@api_view(['POST'])
 	@permission_classes((permissions.AllowAny,))
-	def capture(request):
-		personName = request.data['full_name']
+	def capture(request,mirror=False):
+
+		full_name=request.data['full_name']
+
+
+
+
+		personName = full_name
 		dataPath = BASE_DIR + '/data'
 		personPath = dataPath + '/' + personName
 
@@ -21,7 +27,7 @@ class CaptureView(APIView):
 			print('Carpeta creada: ',personPath)
 			os.makedirs(personPath)
 
-		cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+		cap = cv2.VideoCapture(0,cv2.CAP_ANY )
 		#cap = cv2.VideoCapture('Video.mp4')
 
 		faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
