@@ -153,6 +153,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/var/www/static/'
 
 
+
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = '465'
 EMAIL_HOST_USER = 'rentahogar2020@gmail.com'
