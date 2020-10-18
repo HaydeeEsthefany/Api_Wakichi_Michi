@@ -25,7 +25,8 @@ SECRET_KEY = 'j_(7ndvn9mlv6gr6x=^fa_dv)bu+#z6ui+r*@b7tu%wgmtd=5!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['34.206.53.109', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -106,7 +107,7 @@ DATABASES = {
         'NAME': 'RentaHogar',
         'USER': 'postgres', 
         'PASSWORD': 'postgres',
-        'HOST': 'localhost', 
+        'HOST': '/opt/bitnami/postgresql', 
         'PORT': '5432',
     }
 }
