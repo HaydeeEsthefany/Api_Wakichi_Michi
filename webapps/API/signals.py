@@ -1,7 +1,7 @@
 from django.core.mail import EmailMultiAlternatives #send_mail
 from django.dispatch import receiver
 from django.template.loader import render_to_string
-from web.settings import BACK_END_URL, CDN_URL, EMAIL_HOST_USER
+from web.settings import BACK_END_URL, EMAIL_HOST_USER
 
 from rest_framework_jwt.settings import api_settings
 
