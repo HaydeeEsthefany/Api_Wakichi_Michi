@@ -107,7 +107,7 @@ DATABASES = {
         'NAME': 'bdrentahogar',
         'USER': 'postgres', 
         'PASSWORD': 'postgres',
-        'HOST': 'localhost', 
+        'HOST': 'bdrentahogar.cavau54jskkb.us-east-2.rds.amazonaws.com', 
         'PORT': '5432',
     }
 }
