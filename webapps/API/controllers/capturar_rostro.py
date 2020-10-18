@@ -7,7 +7,7 @@ from web.settings import *
 class CaptureView(APIView):
 
 
-	@api_view(['GET'])
+	@api_view(['POST'])
 	@permission_classes((permissions.AllowAny,))
 	def capture(request):
 		if request.query_params.get('full_name') is None:
