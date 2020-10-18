@@ -22,7 +22,9 @@ class UserView(APIView):
     @api_view(['POST'])
     @permission_classes((permissions.AllowAny,))
     def send_email(request):
-        user    = UserRecords.create(request.data['fullname'],request.data['since'],
+
+        since = datetime.strptime(request.data['since'], '%d/%m/%Y')
+        user    = UserRecords.create(request.data['fullname'],since,
                                     request.data['weeks'],request.data['adult'],request.data['children'],
                                     request.data['email'],request.data['dir_ip'])                
         if user is None:
