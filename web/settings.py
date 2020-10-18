@@ -107,7 +107,7 @@ DATABASES = {
         'NAME': 'RentaHogar',
         'USER': 'postgres', 
         'PASSWORD': 'postgres',
-        'HOST': '/opt/bitnami/postgresql', 
+        'HOST': 'localhost', 
         'PORT': '5432',
     }
 }
