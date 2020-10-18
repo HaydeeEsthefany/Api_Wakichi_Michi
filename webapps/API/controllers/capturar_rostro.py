@@ -13,6 +13,7 @@ class CaptureView(APIView):
 
 		full_name=request.data['full_name']
 
+		cv2.namedWindow("webcam")
 
 
 
@@ -27,7 +28,7 @@ class CaptureView(APIView):
 			print('Carpeta creada: ',personPath)
 			os.makedirs(personPath)
 
-		cap = cv2.VideoCapture(0,cv2.CAP_ANY )
+		cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 		#cap = cv2.VideoCapture('Video.mp4')
 
 		faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
@@ -36,6 +37,8 @@ class CaptureView(APIView):
 		while True:
 
 			ret, frame = cap.read()
+
+			imshow("webcam", frame)
 			if ret == False: break
 			frame =  imutils.resize(frame, width=640)
 			gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
