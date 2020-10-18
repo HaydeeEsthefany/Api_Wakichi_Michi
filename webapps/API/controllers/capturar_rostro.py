@@ -10,15 +10,7 @@ class CaptureView(APIView):
 	@api_view(['POST'])
 	@permission_classes((permissions.AllowAny,))
 	def capture(request):
-		if request.query_params.get('full_name') is None:
-			full_name='anonimo'
-		else:
-			full_name=request.query_params.get('full_name') 
-
-
-
-
-		personName = full_name
+		personName = request.data['full_name']
 		dataPath = BASE_DIR + '/data'
 		personPath = dataPath + '/' + personName
 
